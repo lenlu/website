@@ -7,39 +7,192 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="img1">
-    <div class="text">
-      <span class="Background-text">ANIME</span>
+    <div style="text-align:center; margin: 24px 0;">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search name..." 
+        style="padding: 10px 16px; border-radius: 8px; border: 1px solid #1500ff; font-size: 1rem; width: 220px; margin-right:8px;"
+      >
+      <button 
+        onclick="searchAndBlink()" 
+        style="background: linear-gradient(90deg, #012a77 60%, #4f8cff 100%); color: #fff; border: none; border-radius: 8px; padding: 10px 24px; font-size: 1rem; cursor: pointer; font-weight: 600;"
+        title="Search"
+      >
+        <span style="font-size: 1.2rem;">🔍</span> Search
+      </button>
     </div>
-  </section>
-  <section class="section section-light">
-    <h2>FIRST CHARACTER</h2>
-    <p>Satoru Gojo (Japanese: 五条 悟, Hepburn: Gojō Satoru) is a fictional character from Gege Akutami's manga and anime series Jujutsu Kaisen. He was first introduced in Akutami's short series Tokyo Metropolitan Curse Technical School as the mentor of the cursed teenager Yuta Okkotsu, who suffers a curse of Rika teaches him at Tokyo Prefectural Jujutsu High School. This miniseries became the prequel Jujutsu Kaisen 0 of Jujutsu Kaisen. In main series of Jujutsu Kaisen, Gojo takes the same role but mentors the student Yuji Itadori who suffers a curse of Sukuna, helping him become stronger while protecting other characters in the series.</p>
-  </section>
-  <section class="img2">
-    <div class="text">
-      <span class="Background-text">SATORU GOJO</span>
-    </div>
-  </section>
-  <section class="section section-dark">
-    <h2>SECOND CHARACTER</h2>
-    <p>The image is widely associated with Nightcore versions of the song "Angel With a Shotgun" by The Cab, often used as cover art for a specific anime series; rather, it's a popular fan-made illustration or original artwork frequently paired with Nightcore music.</p>
-  <section class="img3">
-    <div class="text">
-    </div>
-  </section>
-  <section class="section section-dark">
-    <h2>MADE BY</h2>
-    <p>ARUNESH</p>
-  </section>
-  <footer class="section section-light" style="text-align:center; padding:16px 0;">
-    <p>&copy; 2025 ARUNESH. All rights reserved.</p>
-    <p>
-      <a href="https://instagram.com/LENLU_ARUN" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle; margin-right:8px;">
-        @LENLU_ARUN
-      </a>
-    </p>
-  </footer>
+    <script>
+    function searchAndBlink() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      if (!query) return;
+      // Find all links with names
+      const links = document.querySelectorAll('.Background-text a');
+      let found = false;
+      links.forEach(link => {
+        if (link.textContent.trim().toLowerCase() === query) {
+          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          found = true;
+          // Blink effect
+          let count = 0;
+          const blink = setInterval(() => {
+            link.style.background = (count % 2 === 0) ? '#ffe066' : '';
+            link.style.color = (count % 2 === 0) ? '#2a4d8f' : '';
+            count++;
+            if (count > 3) {
+              clearInterval(blink);
+              link.style.background = '';
+              link.style.color = '';
+            }
+          }, 350);
+        }
+      });
+      if (!found) {
+        alert('No match found for: ' + query);
+      }
+    }
+    </script>
+    <section class="img1">
+        <div class="text">
+            <span class="Background-text">SCROLL DOWN TO EXPLORE</span>
+            <h4>CLICK THE NAME ON IMAGES TO REDIRECT TO THERE PAGES</h4>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <p> </p>
+    </section>
+    <section class="img2">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/gokul_kanna_2007/">GOKUL KANNA</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img3">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/black.horse341/">ROOBESH</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img4">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/glk_bad_boy/">LOGESH KUMAR</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img5">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/at_kavin30zz/">KAVIN</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img6">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/mr__2k__kid__kishore__/">KISHORE</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img7">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/mr._.captain__/">PRUTHIVIN</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img8">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/lovely_vijay_the_king/">VIJAY</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img9">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/ayaan_love_18/">AYAAN</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img10">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/cricket_143_forever/">RAJESH</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img11">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/___lovely___boy___22_/">HEMAHARISH</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <section class="img12">
+        <div class="text">
+            <span class="Background-text">
+                <a href="https://www.instagram.com/lenlu_arun/">ARUNESH</a>
+            </span>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <h2>INFO</h2>
+        <p></p>
+    </section>
+    <footer class="img1" style="text-align:center; padding: 1px 0; text-decoration: rgb(34, 255, 0); color: rgb(251, 249, 249);">
+        <h2>MADE BY</h2>
+        <h3>ARUNESH</h3>
+        <h3>&copy; 2025 ARUNESH. All rights reserved.</h3>
+        <a href="https://instagram.com/LENLU_ARUN" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle; margin-right:8px;">
+            @LENLU_ARUN
+        </a>
+        <h3>CONTACT</h3>
+        <p>Email: <a href="mailto:arunesh12307@gmail.com">arunesh12307@gmail.com</a></p>
+        <H1>THANK YOU FOR VISITING</H1>
+    </footer>
 </body>
 </html>
